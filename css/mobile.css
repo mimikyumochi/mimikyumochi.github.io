@@ -77,19 +77,36 @@ body {
         padding-top: 5ch;
 
         gap: 0;
+        justify-content: center;
+
+        .app-icon {
+            margin: 2rem;
+            width: 7vh;
+            height: 7vh;
+
+            i {
+                font-size: 1.5rem;
+            }
+        }
     }
-    .titlebar p {
-        position: absolute;
-        top: 17vh;
-        z-index: 10000;
-        font-size: 2rem;
+    .titlebar {
+        .close-btn {
+            transform: translateY(-100%);
+        }
+        p {
+            position: absolute;
+            top: 17vh;
+            z-index: 10000;
+            font-size: 2rem;
+        }
     }
 
+
+
 }
-.projects-window::after, .socials-window::after {
+.projects-window::after, .socials-window::after, .mods-window::after {
     background-color: transparent;
 }
-
 .popup-window { 
     height: fit-content;
     width: 80%;
@@ -160,19 +177,6 @@ body {
     display: none;
 }
 
-.projects-window .content, .socials-window .content {
-    justify-content: center;
-}
-.projects-window .content .app-icon, .socials-window .content .app-icon {
-    margin: 2rem;
-    width: 7vh;
-    height: 7vh;
-
-    i {
-        font-size: 1.5rem;
-    }
-
-}
 
 .content {
     height: 84vh;
@@ -208,9 +212,6 @@ body {
 }
 .android.window .titlebar .close-btn {
     top: 82vh;
-}
-.projects-window .titlebar .close-btn, .socials-window .titlebar .close-btn {
-    transform: translateY(-100%);
 }
 
 .app-icon#connect4 {

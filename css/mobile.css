@@ -62,7 +62,7 @@ body {
 }
 
 
-.projects-window, .socials-window, .mods-window  {
+.folder  {
     * {
         background-color: transparent;
     }
@@ -102,9 +102,9 @@ body {
     }
 
 
-
 }
-.projects-window::after, .socials-window::after, .mods-window::after {
+
+.folder::after {
     background-color: transparent;
 }
 .popup-window { 

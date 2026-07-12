@@ -191,9 +191,8 @@ a:hover {
 
 }
 
-.projects-window .content,
-.socials-window .content,
-.mods-window .content {
+
+.folder .content {
     text-align: center;
     justify-content: flex-start;
     align-items: center;
@@ -202,7 +201,6 @@ a:hover {
     gap: 1rem 2rem;
     .app-icon {
         margin: 1rem;
-        margin-left: 3%;
         color: rgb(var(--text2));
         border-color: rgb(var(--text2));
     };

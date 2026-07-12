@@ -7,6 +7,7 @@ export class AboutWindow extends Window {
     constructor(locale) {
         super("about", `${locale.about.title}`, `
                 <p data-i18n="about.age"><i class="fa-regular fa-heart" style="color:lightskyblue"></i> ${locale.about.age}</p>
+                <p data-i18n="about.relationship"><i class="fa-regular fa-heart" style="color:lightskyblue"></i> ${locale.about.relationship}</p>
                 <p data-i18n="about.kotlin"><i class="fa-regular fa-heart" style="color:lightskyblue"></i> ${locale.about.kotlin}</p>
                 <p data-i18n="about.hatepeople"><i class="fa-regular fa-heart" style="color:lightskyblue"></i> ${locale.about.hatepeople}</p>
                 <p data-i18n="about.eepy"><i class="fa-regular fa-heart" style="color:lightskyblue"></i> ${locale.about.eepy}</p>
@@ -43,7 +44,7 @@ export class SpecsWindow extends Window {
 
 export class ProjectsWindow extends Window {
     constructor(locale) {
-        super("projects", `${locale.apps.projects}`, `
+        super("folder projects", `${locale.apps.projects}`, `
             
             <div class="app-icon" id="connect4">
                 <i class="fa-solid fa-circle" id="red" style="color: rgb(255, 93, 93);"></i>
@@ -92,12 +93,12 @@ export class ProjectsWindow extends Window {
 
         el.querySelector("#faithbot").addEventListener("click", (e) => {
             e.stopPropagation();
-            new PopupWindow(locale, "file", "https://github.com/mimikyumochi/FaithBot", "projects");
+            new PopupWindow(locale, "file", "https://github.com/mimikyumochi/FaithBot", "folder projects");
         });
 
         el.querySelector("#mazegen").addEventListener("click", (e) => {
             e.stopPropagation();
-            new PopupWindow(locale, "file", "https://github.com/mimikyumochi/hunt-and-kill",  "projects");
+            new PopupWindow(locale, "file", "https://github.com/mimikyumochi/hunt-and-kill",  "folder projects");
         });
 
         el.querySelector("#clock").addEventListener("click", (e) => {
@@ -110,7 +111,7 @@ export class SocialsWindow extends Window {
     constructor(locale) {
         let isDark = localStorage.getItem("mainDarkMode") == "true" ? "" : "-dark"
 
-        super("socials", `${locale.apps.socials}`, `
+        super("folder socials", `${locale.apps.socials}`, `
 
             <div class="app-icon" id="github">
                 <img class="icon-img" src="assets/github${isDark}.svg"></img>
@@ -137,19 +138,24 @@ export class SocialsWindow extends Window {
                 <img class="icon-img" src="assets/twitter.svg"></img>
                 <span class="app-label">twitter.web</span>
             </div>
+            <div class="app-icon" id="modrinth">
+                <img class="icon-img" src="assets/modrinth.svg"></img>
+                <span class="app-label">modrinth.web</span>
+            </div>
             `)
 
             const el = this.el;
-            el.querySelector("#github").addEventListener("click", () => new PopupWindow(locale, "link", "https://github.com/mimikyumochi", "socials"));
-            el.querySelector("#youtube").addEventListener("click", () => new PopupWindow(locale, "link", "https://youtube.com/@mimikyumochi", "socials"));
-            el.querySelector("#instagram").addEventListener("click", () => new PopupWindow(locale, "link", "https://instagram.com/mimikyumochii", "socials"));
-            el.querySelector("#pronouns-page").addEventListener("click", () => new PopupWindow(locale, "link", "https://pronouns.page/@mimikyumochi", "socials"));
-            el.querySelector("#twitter").addEventListener("click", () => new PopupWindow(locale, "link", "https://twitter.com/mimikyumochii", "socials"));
+            el.querySelector("#github").addEventListener("click", () => new PopupWindow(locale, "link", "https://github.com/mimikyumochi", "folder socials"));
+            el.querySelector("#youtube").addEventListener("click", () => new PopupWindow(locale, "link", "https://youtube.com/@mimikyumochi", "folder socials"));
+            el.querySelector("#instagram").addEventListener("click", () => new PopupWindow(locale, "link", "https://instagram.com/mimikyumochii", "folder socials"));
+            el.querySelector("#pronouns-page").addEventListener("click", () => new PopupWindow(locale, "link", "https://pronouns.page/@mimikyumochi", "folder socials"));
+            el.querySelector("#twitter").addEventListener("click", () => new PopupWindow(locale, "link", "https://twitter.com/mimikyumochii", "folder socials"));
+            el.querySelector("#modrinth").addEventListener("click", () => new PopupWindow(locale, "link", "https://modrinth.com/user/mimikyumochi", "folder socials"));
     }
 }
 export class ModsWindow extends Window {
     constructor(locale) {
-        super("mods", `${locale.apps.mods}`, `
+        super("folder mods", `${locale.apps.mods}`, `
 
             <div class="app-icon" id="chiyoko">
                 <img class="icon-img" src="assets/modrinth.svg"></img>
@@ -163,8 +169,8 @@ export class ModsWindow extends Window {
             `)
 
         const el = this.el;
-        el.querySelector("#chiyoko").addEventListener("click", () => new PopupWindow(locale, "link", "https://modrinth.com/mod/chiyoko", "mods"));
-        el.querySelector("#opentolanfix").addEventListener("click", () => new PopupWindow(locale, "link", "https://modrinth.com/mod/open-to-lan-fix", "mods"));
+        el.querySelector("#chiyoko").addEventListener("click", () => new PopupWindow(locale, "link", "https://modrinth.com/mod/chiyoko", "folder mods"));
+        el.querySelector("#opentolanfix").addEventListener("click", () => new PopupWindow(locale, "link", "https://modrinth.com/mod/open-to-lan-fix", "folder mods"));
     }
 }
 export class SpeedrunsWindow extends Window {

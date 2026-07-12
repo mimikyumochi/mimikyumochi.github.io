@@ -145,12 +145,12 @@ export class SocialsWindow extends Window {
             `)
 
             const el = this.el;
-            el.querySelector("#github").addEventListener("click", () => new PopupWindow(locale, "link", "https://github.com/mimikyumochi", "folder socials"));
-            el.querySelector("#youtube").addEventListener("click", () => new PopupWindow(locale, "link", "https://youtube.com/@mimikyumochii", "folder socials"));
-            el.querySelector("#instagram").addEventListener("click", () => new PopupWindow(locale, "link", "https://instagram.com/mimikyumochii", "folder socials"));
-            el.querySelector("#pronouns-page").addEventListener("click", () => new PopupWindow(locale, "link", "https://pronouns.page/@mimikyumochi", "folder socials"));
-            el.querySelector("#twitter").addEventListener("click", () => new PopupWindow(locale, "link", "https://twitter.com/mimikyumochii", "folder socials"));
-            el.querySelector("#modrinth").addEventListener("click", () => new PopupWindow(locale, "link", "https://modrinth.com/user/mimikyumochi", "folder socials"));
+            el.querySelector("#github").addEventListener("click", () => new PopupWindow(locale, "link", "https://github.com/mimikyumochi", "socials"));
+            el.querySelector("#youtube").addEventListener("click", () => new PopupWindow(locale, "link", "https://youtube.com/@mimikyumochii", "socials"));
+            el.querySelector("#instagram").addEventListener("click", () => new PopupWindow(locale, "link", "https://instagram.com/mimikyumochi", "socials"));
+            el.querySelector("#pronouns-page").addEventListener("click", () => new PopupWindow(locale, "link", "https://pronouns.page/@mimikyumochi", "socials"));
+            el.querySelector("#twitter").addEventListener("click", () => new PopupWindow(locale, "link", "https://twitter.com/mimikyumochii", "socials"));
+            el.querySelector("#modrinth").addEventListener("click", () => new PopupWindow(locale, "link", "https://modrinth.com/user/mimikyumochi", "socials"));
     }
 }
 export class ModsWindow extends Window {
@@ -169,8 +169,8 @@ export class ModsWindow extends Window {
             `)
 
         const el = this.el;
-        el.querySelector("#chiyoko").addEventListener("click", () => new PopupWindow(locale, "link", "https://modrinth.com/mod/chiyoko", "folder mods"));
-        el.querySelector("#opentolanfix").addEventListener("click", () => new PopupWindow(locale, "link", "https://modrinth.com/mod/open-to-lan-fix", "folder mods"));
+        el.querySelector("#chiyoko").addEventListener("click", () => new PopupWindow(locale, "link", "https://modrinth.com/mod/chiyoko", "mods"));
+        el.querySelector("#opentolanfix").addEventListener("click", () => new PopupWindow(locale, "link", "https://modrinth.com/mod/open-to-lan-fix", "mods"));
     }
 }
 export class SpeedrunsWindow extends Window {

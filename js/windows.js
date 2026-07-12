@@ -146,7 +146,7 @@ export class SocialsWindow extends Window {
 
             const el = this.el;
             el.querySelector("#github").addEventListener("click", () => new PopupWindow(locale, "link", "https://github.com/mimikyumochi", "folder socials"));
-            el.querySelector("#youtube").addEventListener("click", () => new PopupWindow(locale, "link", "https://youtube.com/@mimikyumochi", "folder socials"));
+            el.querySelector("#youtube").addEventListener("click", () => new PopupWindow(locale, "link", "https://youtube.com/@mimikyumochii", "folder socials"));
             el.querySelector("#instagram").addEventListener("click", () => new PopupWindow(locale, "link", "https://instagram.com/mimikyumochii", "folder socials"));
             el.querySelector("#pronouns-page").addEventListener("click", () => new PopupWindow(locale, "link", "https://pronouns.page/@mimikyumochi", "folder socials"));
             el.querySelector("#twitter").addEventListener("click", () => new PopupWindow(locale, "link", "https://twitter.com/mimikyumochii", "folder socials"));
